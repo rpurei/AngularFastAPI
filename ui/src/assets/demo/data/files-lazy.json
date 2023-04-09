@@ -1,0 +1,26 @@
+{
+    "data":
+    [
+        {
+            "label": "Узел 0",
+            "data": "Узел 0",
+            "expandedIcon": "pi pi-folder-open",
+            "collapsedIcon": "pi pi-folder",
+            "leaf": false
+        },
+        {
+            "label": "Узел 1",
+            "data": "Узел 1",
+            "expandedIcon": "pi pi-folder-open",
+            "collapsedIcon": "pi pi-folder",
+            "leaf": false
+        },
+        {
+            "label": "Узел 2",
+            "data": "Узел 2",
+            "expandedIcon": "pi pi-folder-open",
+            "collapsedIcon": "pi pi-folder",
+            "leaf": false
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+{
+	"data": [
+		{
+			"id": "1000",
+			"code": "f230fh0g3",
+			"name": "Часы",
+			"description": "Описание товара",
+			"image": "bamboo-watch.jpg",
+			"price": 65,
+			"category": "Аксессуары",
+			"quantity": 24,
+			"inventoryStatus": "INSTOCK",
+			"rating": 5
+		},
+		{
+			"id": "1001",
+			"code": "nvklal433",
+			"name": "Часы",
+			"description": "Описание товара",
+			"image": "black-watch.jpg",
+			"price": 72,
+			"category": "Аксессуары",
+			"quantity": 61,
+			"inventoryStatus": "INSTOCK",
+			"rating": 4
+		},
+		{
+			"id": "1002",
+			"code": "zz21cz3c1",
+			"name": "Браслет",
+			"description": "Описание товара",
+			"image": "blue-band.jpg",
+			"price": 79,
+			"category": "Фитнес",
+			"quantity": 2,
+			"inventoryStatus": "LOWSTOCK",
+			"rating": 3
+		},
+		{
+			"id": "1003",
+			"code": "244wgerg2",
+			"name": "Футболка",
+			"description": "Описание товара",
+			"image": "blue-t-shirt.jpg",
+			"price": 29,
+			"category": "Одежда",
+			"quantity": 25,
+			"inventoryStatus": "INSTOCK",
+			"rating": 5
+		},
+		{
+			"id": "1004",
+			"code": "h456wer53",
+			"name": "Браслет",
+			"description": "Описание товара",
+			"image": "bracelet.jpg",
+			"price": 15,
+			"category": "Аксессуары",
+			"quantity": 73,
+			"inventoryStatus": "INSTOCK",
+			"rating": 4
+		},
+		{
+			"id": "1005",
+			"code": "av2231fwg",
+			"name": "Сумка",
+			"description": "Описание товара",
+			"image": "brown-purse.jpg",
+			"price": 120,
+			"category": "Аксессуары",
+			"quantity": 0,
+			"inventoryStatus": "OUTOFSTOCK",
+			"rating": 4
+		},
+		{
+			"id": "1006",
+			"code": "bib36pfvm",
+			"name": "Браслет",
+			"description": "Описание товара",
+			"image": "chakra-bracelet.jpg",
+			"price": 32,
+			"category": "Аксессуары",
+			"quantity": 5,
+			"inventoryStatus": "LOWSTOCK",
+			"rating": 3
+		},
+		{
+			"id": "1007",
+			"code": "mbvjkgip5",
+			"name": "Серьги",
+			"description": "Описание товара",
+			"image": "galaxy-earrings.jpg",
+			"price": 34,
+			"category": "Аксессуары",
+			"quantity": 23,
+			"inventoryStatus": "INSTOCK",
+			"rating": 5
+		},
+		{
+			"id": "1008",
+			"code": "vbb124btr",
+			"name": "Игровой контроллер",
+			"description": "Описание товара",
+			"image": "game-controller.jpg",
+			"price": 99,
+			"category": "Электроника",
+			"quantity": 2,
+			"inventoryStatus": "LOWSTOCK",
+			"rating": 4
+		},
+		{
+			"id": "1009",
+			"code": "cm230f032",
+			"name": "Игровой набор",
+			"description": "Описание товара",
+			"image": "gaming-set.jpg",
+			"price": 299,
+			"category": "Электроника",
+			"quantity": 63,
+			"inventoryStatus": "INSTOCK",
+			"rating": 3
+		}
+	]
+}

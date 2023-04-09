@@ -1,0 +1,202 @@
+<div class="grid p-fluid">
+	<div class="col-12 md:col-6">
+		<div class="card">
+			<h5>Поля ввода</h5>
+			<div class="grid formgrid">
+				<div class="col-12 mb-2 lg:col-4 lg:mb-0">
+					<input type="text" pInputText placeholder="По умолчанию">
+				</div>
+				<div class="col-12 mb-2 lg:col-4 lg:mb-0">
+					<input type="text" pInputText placeholder="Отключено" [disabled]="true"/>
+				</div>
+				<div class="col-12 mb-2 lg:col-4 lg:mb-0">
+					<input type="text" pInputText placeholder="Неправильное" class="ng-dirty ng-invalid"/>
+				</div>
+			</div>
+
+			<h5>Иконки</h5>
+			<div class="grid formgrid">
+				<div class="col-12 mb-2 lg:col-4 lg:mb-0">
+					<span class="p-input-icon-left">
+						<i class="pi pi-user"></i>
+						<input type="text" pInputText placeholder="Имя пользователя"/>
+					</span>
+				</div>
+				<div class="col-12 mb-2 lg:col-4 lg:mb-0">
+					<span class="p-input-icon-right">
+						<input type="text" pInputText placeholder="Поиск"/>
+						<i class="pi pi-search"></i>
+					</span>
+				</div>
+				<div class="col-12 mb-2 lg:col-4 lg:mb-0">
+					<span class="p-input-icon-left p-input-icon-right">
+						<i class="pi pi-user"></i>
+						<input type="text" pInputText placeholder="Поиск"/>
+						<i class="pi pi-search"></i>
+					</span>
+				</div>
+			</div>
+
+			<h5>Подвижный лейбл</h5>
+			<span class="p-float-label">
+				<input id="float-input" type="text" pInputText>
+				<label for="float-input">Имя пользователя</label>
+			</span>
+
+			<h5>Текстовое поле</h5>
+			<textarea rows="5" cols="30" placeholder="Ваше сообщение" pInputTextarea></textarea>
+
+			<h5>Автодополнение</h5>
+			<p-autoComplete [(ngModel)]="selectedCountryAdvanced" [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name" [dropdown]="true">
+			</p-autoComplete>
+
+			<h5>Календарь</h5>
+			<p-calendar [showIcon]="true" inputId="icon"></p-calendar>
+
+			<h5>Число</h5>
+			<p-inputNumber mode="decimal" [showButtons]="true" [min]="0" [max]="100">
+			</p-inputNumber>
+
+			<h5>Чипсы</h5>
+			<p-chips></p-chips>
+		</div>
+
+		<div class="card">
+            <div class="grid">
+                <div class="col-12">
+                    <h5>Слайдер</h5>
+                    <input type="text" pInputText [(ngModel)]="valSlider" readonly/>
+                    <p-slider [(ngModel)]="valSlider"></p-slider>
+                </div>
+                <div class="col-12 md:col-6">
+                    <h5>Рейтинг</h5>
+                    <p-rating></p-rating>
+                </div>
+                <div class="col-12 md:col-6">
+                    <h5>Выбор цвета</h5>
+                    <p-colorPicker [(ngModel)]="valColor"></p-colorPicker>
+                </div>
+                <div class="col-12">
+                    <h5>Ручка</h5>
+                    <p-knob [(ngModel)]="valueKnob" valueTemplate="{value}%" [step]="10" [min]="-50" [max]="50"></p-knob>
+                </div>
+            </div>
+		</div>
+	</div>
+
+	<div class="col-12 md:col-6">
+		<div class="card">
+			<h5>Радио</h5>
+			<div class="grid formgrid">
+				<div class="col-12 md:col-4">
+					<div class="field-radiobutton">
+						<p-radioButton name="city" value="Белгород" [(ngModel)]="valRadio" id="city1"></p-radioButton>
+						<label for="city1">Белгород</label>
+					</div>
+				</div>
+				<div class="col-12 md:col-4">
+					<div class="field-radiobutton">
+						<p-radioButton name="city" value="Воронеж" [(ngModel)]="valRadio"
+									   id="city2"></p-radioButton>
+						<label for="city2">Воронеж</label>
+					</div>
+				</div>
+				<div class="col-12 md:col-4">
+					<div class="field-radiobutton">
+						<p-radioButton name="city" value="Курск" [(ngModel)]="valRadio" id="city3"></p-radioButton>
+						<label for="city3">Курск</label>
+					</div>
+				</div>
+			</div>
+
+			<h5>Чекбокс</h5>
+			<div class="grid formgrid">
+				<div class="col-12 md:col-4">
+					<div class="field-checkbox">
+						<p-checkbox name="group1" value="Белгород" [(ngModel)]="valCheck" id="ny"></p-checkbox>
+						<label for="ny">Белгород</label>
+					</div>
+				</div>
+				<div class="col-12 md:col-4">
+					<div class="field-checkbox">
+						<p-checkbox name="group1" value="Воронеж" [(ngModel)]="valCheck" id="sf"></p-checkbox>
+						<label for="sf">Воронеж</label>
+					</div>
+				</div>
+				<div class="col-12 md:col-4">
+					<div class="field-checkbox">
+						<p-checkbox name="group1" value="Курск" [(ngModel)]="valCheck" id="la"></p-checkbox>
+						<label for="la">Курск</label>
+					</div>
+				</div>
+			</div>
+
+			<h5>Переключатель</h5>
+			<p-inputSwitch [(ngModel)]="valSwitch"></p-inputSwitch>
+		</div>
+
+		<div class="card">
+			<h5>Поиск в списке</h5>
+			<p-listbox [options]="cities" [(ngModel)]="selectedList" [filter]="true"></p-listbox>
+
+			<h5>Выпадающий список</h5>
+			<p-dropdown [options]="cities" [(ngModel)]="selectedDrop" placeholder="Выберите город" [showClear]="true"></p-dropdown>
+
+			<h5>Множественный выбор</h5>
+			<p-multiSelect [options]="countries" [(ngModel)]="selectedMulti" placeholder="Выберите страну" optionLabel="name" class="multiselect-custom" display="chip">
+				<ng-template let-country pTemplate="item">
+					<div class="flex align-items-center">
+						<img src="assets/demo/images/flag/flag_placeholder.png" [class]="'flag flag-' + country.code.toLowerCase()" style="width:21px" alt=""/>
+						<span class="ml-2">{{country.name}}</span>
+					</div>
+				</ng-template>
+			</p-multiSelect>
+		</div>
+
+		<div class="card">
+			<h5>Кнопка-переключатель</h5>
+			<p-toggleButton [(ngModel)]="valToggle" onLabel="Да" offLabel="Нет" [style]="{'width': '10em'}"></p-toggleButton>
+
+			<h5>Радио-кнопка</h5>
+			<p-selectButton [options]="paymentOptions" [(ngModel)]="valSelect1" optionLabel="name"></p-selectButton>
+
+			<h5>Кнопка мултивыбор</h5>
+			<p-selectButton [options]="paymentOptions" [(ngModel)]="valSelect2" [multiple]="true" optionLabel="name"></p-selectButton>
+		</div>
+	</div>
+
+	<div class="col-12">
+		<div class="card">
+			<h5>Группа полей ввода</h5>
+			<div class="grid">
+				<div class="col-12 md:col-6">
+					<div class="p-inputgroup">
+						<span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+						<input type="text" pInputText placeholder="Имя пользователя">
+					</div>
+				</div>
+				<div class="col-12 md:col-6">
+					<div class="p-inputgroup">
+						<span class="p-inputgroup-addon"><i class="pi pi-tags" style="line-height: 1.25;"></i></span>
+						<span class="p-inputgroup-addon"><i class="pi pi-shopping-cart" style="line-height: 1.25;"></i></span>
+						<input type="text" pInputText placeholder="Цена">
+						<span class="p-inputgroup-addon">RUB</span>
+						<span class="p-inputgroup-addon">.00</span>
+					</div>
+				</div>
+				<div class="col-12 md:col-6">
+					<div class="p-inputgroup">
+						<button type="button" pButton pRipple label="Поиск"></button>
+						<input type="text" pInputText placeholder="Слово">
+					</div>
+				</div>
+				<div class="col-12 md:col-6">
+					<div class="p-inputgroup">
+						<span class="p-inputgroup-addon"><p-checkbox [(ngModel)]="valCheck2" [binary]="true"></p-checkbox></span>
+						<input type="text" pInputText placeholder="Имя пользователя">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
